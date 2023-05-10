@@ -42,19 +42,27 @@ function ContactARetailer() {
         setShowSuccessMessage(true);
         setTimeout(() => {
           setShowSuccessMessage(false);
-        }, 4000); 
+        }, 4000);
         setFormError(false);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          country: "",
+          requestPurpose: "",
+          newsletter: false
+        });
       } else {
         setFormError(true);
         setTimeout(() => {
           setFormError(false);
-        }, 4000) 
+        }, 4000);
       }
     } else {
       setFormError(true);
       setTimeout(() => {
         setFormError(false);
-      }, 4000) 
+      }, 4000);
     }
   };
 

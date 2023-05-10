@@ -35,17 +35,23 @@ export default function Contact() {
             setShowSuccessMessage(false);
           }, 4000);
           setFormError(false);
+          setFormData({
+            firstName: "",
+            lastName: "",
+            email: "",
+            message: ""
+          });
         } else {
           setFormError(true);
           setTimeout(() => {
             setFormError(false);
-          }, 4000) 
+          }, 4000);
         }
       } else {
         setFormError(true);
         setTimeout(() => {
           setFormError(false);
-        }, 4000) 
+        }, 4000);
       }
     };
   

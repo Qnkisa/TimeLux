@@ -8,25 +8,6 @@ export default function HomeBottom(){
 
     return (
         <div className="home-bottom">
-            <div className="home-bottom-articles-helper">
-                <h3>Expert Watch Insights</h3>
-                <div className="home-bottom-articles">
-                    <Link to="/choose-your-watch">
-                        <div className="home-bottom-article choose-your-watch-class">
-                            <p>3 Tips for Choosing the Perfect Luxury Watch for Your Style</p>     
-                            <div className="article-fill-left"></div>
-                            <div className="article-fill-right"></div>
-                        </div>
-                    </Link>
-                    <Link to="/watch-care">
-                        <div className="home-bottom-article watch-care-class">
-                            <p>The Ultimate Guide to Watch Care and Maintenance</p>
-                            <div className="article-fill-left"></div>
-                            <div className="article-fill-right"></div>
-                        </div>
-                    </Link>
-                </div>
-            </div>
             <div className="home-bottom-brands" id="home-bottom-brands">
                 <Link to="/omega">
                     <div className="home-bottom-brands-div">

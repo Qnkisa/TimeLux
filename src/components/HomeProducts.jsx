@@ -12,28 +12,6 @@ export default function HomeProducts(){
     }
   }
 
-  const heading1Ref = useRef();
-  const heading2Ref = useRef();
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("intersected");
-          }
-        });
-      },
-      { threshold: 0.5 } 
-    );
-
-    observer.observe(heading1Ref.current);
-    observer.observe(heading2Ref.current);
-
-   
-    return () => observer.disconnect();
-  }, []);
-
 
  
 
@@ -41,8 +19,8 @@ export default function HomeProducts(){
     return(
         <div className="home-products">
             <div className="home-description">
-                <h1 ref={heading1Ref}>Access the World of Luxury with TimeLux</h1>
-                <h2 ref={heading2Ref}>TimeLux is the ultimate destination for luxury and branded watches. Our collection features the most iconic names in the industry - Rolex, Patek Philippe, and Omega. Each timepiece is hand-selected to ensure that our customers receive only the highest quality and most authentic watches. Our commitment to excellence is reflected in every aspect of our business.</h2>
+                <h1>Access the World of Luxury with TimeLux</h1>
+                <h2>TimeLux is the ultimate destination for luxury and branded watches. Our collection features the most iconic names in the industry - Rolex, Patek Philippe, and Omega. Each timepiece is hand-selected to ensure that our customers receive only the highest quality and most authentic watches. Our commitment to excellence is reflected in every aspect of our business.</h2>
             </div>
             <div className="home-watches">
                 <p>A few of our favourites</p>

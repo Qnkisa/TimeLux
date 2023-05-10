@@ -2,19 +2,24 @@ import React,{useState} from "react"
 import {Link} from "react-router-dom"
 
 export default function Footer(){
-
     const [showSuccessMessage, setShowSuccessMessage] = useState(false);
-
-        const handleSubmit = (event) => {
-            event.preventDefault();
-
-            const emailInput = event.target.querySelector('input[type="email"]');
-            if (emailInput.validity.valid) {
-            setShowSuccessMessage(true);
-            setTimeout(() => setShowSuccessMessage(false), 3000);
-            }
-        };
-
+    const [email, setEmail] = useState("");
+  
+    const handleEmailChange = (event) => {
+        setEmail(event.target.value);
+      };
+      
+      const handleSubmit = (event) => {
+        event.preventDefault();
+      
+        if (event.target.checkValidity()) {
+          setShowSuccessMessage(true);
+          setEmail(""); 
+          setTimeout(() => {
+            setShowSuccessMessage(false);
+          }, 3000);
+        }
+      };
     return(
         <footer>
             {showSuccessMessage && (
@@ -23,10 +28,10 @@ export default function Footer(){
             <div className="footer-top">
                 <h5>Follow us</h5>
                 <div className="footer-socials-links">
-                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-pinterest"></ion-icon></a>
-                    <a href="#"><ion-icon name="logo-linkedin"></ion-icon></a>
+                    <a href="https://twitter.com/home" target="_blank"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="https://www.facebook.com/" target="_blank"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="https://www.pinterest.com/" target="_blank"><ion-icon name="logo-pinterest"></ion-icon></a>
+                    <a href="https://www.linkedin.com/feed/" target="_blank"><ion-icon name="logo-linkedin"></ion-icon></a>
                 </div>
             </div>
             <div className="footer-middle">
@@ -64,8 +69,13 @@ export default function Footer(){
                     <li>
                         <h6>Subscription</h6>
                         <p>Subscribe your Email address for latest news & updates.</p>
-                        <form onSubmit={handleSubmit}>
-                            <input type="email" placeholder="Email..." required />
+                        <form onSubmit={handleSubmit}><input
+                            type="email"
+                            placeholder="Email..."
+                            required
+                            value={email}
+                            onChange={handleEmailChange}
+                        />
                             <button type="submit">Submit</button>
                         </form>
                     </li>

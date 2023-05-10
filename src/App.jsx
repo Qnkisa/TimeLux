@@ -28,9 +28,6 @@ import RolexSeaDweller from "./Pages/RolexSeaDweller"
 import RolexSkyDweller from "./Pages/RolexSkyDweller"
 import RolexYachtMaster42 from "./Pages/RolexYachtMaster42"
 
-import ChooseYourWatch from "./Pages/ChooseYourWatch"
-import WatchCare from "./Pages/WatchCare"
-
 import ScrollToTop from './Pages/ScrollToTop'
 
 import ContactARetailer from './Pages/ContactARetailer'
@@ -65,8 +62,6 @@ return (
                 <Route path='/rolex-gmt-master-ii' element={<RolexGMTMasterII/>}></Route>
                 <Route path='/rolex-sea-dweller' element={<RolexSeaDweller/>}></Route>
                 <Route path='/rolex-air-king' element={<RolexAirKing/>}></Route>
-                <Route path='/choose-your-watch' element={<ChooseYourWatch/>}></Route>
-                <Route path='/watch-care' element={<WatchCare/>}></Route>
             </Routes>
             <Footer/>
         </ScrollToTop>

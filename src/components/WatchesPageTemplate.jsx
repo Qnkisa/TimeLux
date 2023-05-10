@@ -6,7 +6,7 @@ export default function WatchesPageTemplate(props){
         backgroundImage: props.watchLinearGradient
       }
 
-    const text1Ref = useRef();
+    /*const text1Ref = useRef();
     const text2Ref = useRef();
 
     useEffect(() => {
@@ -28,11 +28,11 @@ export default function WatchesPageTemplate(props){
 
     
         return () => observer.disconnect();
-    }, []);
+    }, []);*/
 
     return(
         <div className="watch-page">
-            <div className="watch-page-top" ref={text1Ref}>
+            <div className="watch-page-top">
                 <div className="watch-page-top-image">
                     <img src={props.heroImage} alt="" />
                 </div>
@@ -49,7 +49,7 @@ export default function WatchesPageTemplate(props){
                     <p>{props.watchMotoText}</p>
                 </div>
             </div>
-            <div className="watch-page-warranty" ref={text2Ref}>
+            <div className="watch-page-warranty">
                 <div className="watch-page-warranty-content">
                     <h3>5-year warranty</h3>
                     <p>All TimeLux watches are delivered with a 5-year warranty that covers the repair of any material or manufacturing defects. Please refer to the operating instructions for specific information about the warranty conditions and restrictions.</p>
