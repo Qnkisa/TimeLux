@@ -1302,6 +1302,7 @@ textarea {
   display: grid;
   grid-template-columns: repeat(3,1fr);
   gap: 50px;
+  padding: 0 2rem;
 }
 
 .watch-page-watches-container .watch-container{
@@ -1619,7 +1620,7 @@ textarea {
   nav ul{
     display: block;
     text-align: center;
-    margin-top: 60px;
+    margin-top: 25vh;
   }
 
   nav ul li{
